@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:Hritcu_DragosCristian_Lab2Context"
+    }
+  }
+}
