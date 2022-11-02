@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Hritcu_DragosCristian_Lab2.Data;
 using Hritcu_DragosCristian_Lab2.Models;
 
-namespace Hritcu_DragosCristian_Lab2.Pages.Books
+namespace Hritcu_DragosCristian_Lab2.Pages.Categories
 {
     public class EditModel : PageModel
     {
@@ -36,9 +36,7 @@ namespace Hritcu_DragosCristian_Lab2.Pages.Books
                 return NotFound();
             }
             Book = book;
-
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
-        "PublisherName");
+           ViewData["PublisherID"] = new SelectList(_context.Publisher, "ID", "ID");
             return Page();
         }
 

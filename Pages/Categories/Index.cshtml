@@ -1,5 +1,5 @@
 ﻿@page
-@model Hritcu_DragosCristian_Lab2.Pages.Books.IndexModel
+@model Hritcu_DragosCristian_Lab2.Pages.Categories.IndexModel
 
 @{
     ViewData["Title"] = "Index";
@@ -26,8 +26,9 @@
                 @Html.DisplayNameFor(model => model.Book[0].PublishingDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Book[0].Publisher.PublisherName)
+                @Html.DisplayNameFor(model => model.Book[0].Publisher)
             </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -46,7 +47,7 @@
                 @Html.DisplayFor(modelItem => item.PublishingDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Publisher.PublisherName)
+                @Html.DisplayFor(modelItem => item.Publisher.ID)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |

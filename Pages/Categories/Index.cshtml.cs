@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Hritcu_DragosCristian_Lab2.Data;
 using Hritcu_DragosCristian_Lab2.Models;
 
-namespace Hritcu_DragosCristian_Lab2.Pages.Books
+namespace Hritcu_DragosCristian_Lab2.Pages.Categories
 {
     public class IndexModel : PageModel
     {
@@ -26,8 +26,7 @@ namespace Hritcu_DragosCristian_Lab2.Pages.Books
             if (_context.Book != null)
             {
                 Book = await _context.Book
-                    .Include(b=>b.Publisher)
-                    .ToListAsync();
+                .Include(b => b.Publisher).ToListAsync();
             }
         }
     }

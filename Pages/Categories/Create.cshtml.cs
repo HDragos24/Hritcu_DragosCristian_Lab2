@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Hritcu_DragosCristian_Lab2.Data;
 using Hritcu_DragosCristian_Lab2.Models;
 
-namespace Hritcu_DragosCristian_Lab2.Pages.Books
+namespace Hritcu_DragosCristian_Lab2.Pages.Categories
 {
     public class CreateModel : PageModel
     {
@@ -21,8 +21,7 @@ namespace Hritcu_DragosCristian_Lab2.Pages.Books
 
         public IActionResult OnGet()
         {
-            ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID",
-        "PublisherName");
+        ViewData["PublisherID"] = new SelectList(_context.Publisher, "ID", "ID");
             return Page();
         }
 
